@@ -1,0 +1,53 @@
+listen:
+  address: :8088
+  readTimeout: 5s
+  writeTimeout: 10s
+  idleTimeout: 1s
+recover:
+  stackSize: 4096
+  disableStackAll: false
+  disablePrintStack: false
+route:
+  backend: etcd
+  #filePath: ./route.cfg
+consul:
+  address: 127.0.0.1:8500
+  scheme: http
+  username: 
+  password:
+etcd:
+  addresses: ["http://127.0.0.1:2379"]
+  serviceDir: /iget/service/http
+proxy:
+  strategy: rnd
+  matcher: prefix
+  noRoute: 404
+  maxConn: 10000
+  bufSize: 128
+  shutdownWait: 5s
+  dialTimeout: 30s
+  flushInterval: 1s
+  respHeaderTimeout: 5s
+  keepAliveTimeout: 30s
+guard:
+  # for sign
+  secret: OzPSx9JKq3W4yLyVNcNF
+  # for timestamp range
+  timeRange: 600
+reactor:
+  circuitBreaker:
+    thresholdCount: 60
+    thresholdDuration: 30s
+    blockDuration: 30s
+  rateLimiter:
+    thresholdCount: 60
+    ttl: 30s
+    lockNum: 100
+  replay:
+    ttl: 30s
+admin:
+  listen: :9088
+metric:
+  listen: :7088
+webui:
+  listen: :8091
