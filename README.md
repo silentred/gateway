@@ -1,4 +1,4 @@
-# Entree
+# Gateway 
 
 API gateway in golang
 
