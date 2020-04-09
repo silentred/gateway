@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/hashicorp/consul/api"
-	"github.com/stretchr/testify/assert"
 	"github.com/silentred/gateway/config"
 	"github.com/silentred/gateway/route"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestListService(t *testing.T) {
@@ -65,7 +65,7 @@ func addSvc(t *testing.T, cli *api.Client) {
 		Port:    8080,
 		Address: "localhost",
 		Tags: []string{
-			"gw.host=www.luojilab.com",
+			"gw.host=www.baidu.com",
 			"gw.prefix=/v1/C/hello",
 			"gw.strip=/v1",
 			"gw.weight=20",

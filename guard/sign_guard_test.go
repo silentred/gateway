@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/silentred/gateway/util"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSignGuard(t *testing.T) {
@@ -28,14 +28,14 @@ func TestSignGuard(t *testing.T) {
 		"X-Sign":       "wrong sign",
 	}
 	// for invalid param
-	req, err := util.NewHTTPReqeust(http.MethodGet, "http://www.luojilab.com/sdf", query, header, nil)
+	req, err := util.NewHTTPReqeust(http.MethodGet, "http://www.baidu.com/sdf", query, header, nil)
 	assert.NoError(t, err)
 	err = g.Reject(req)
 	assert.Equal(t, ErrInvalidParam, err)
 
 	// for invalid sign
 	header["X-App-Key"] = key
-	req, err = util.NewHTTPReqeust(http.MethodGet, "http://www.luojilab.com/sdf", query, header, nil)
+	req, err = util.NewHTTPReqeust(http.MethodGet, "http://www.baidu.com/sdf", query, header, nil)
 	assert.NoError(t, err)
 	err = g.Reject(req)
 	assert.Equal(t, ErrSign, err)
@@ -43,7 +43,7 @@ func TestSignGuard(t *testing.T) {
 	// for right sign
 	s := sign(key, http.MethodGet, "application/json", req.URL.Path, req.URL.Query().Encode(), time, "123", secret)
 	header["X-Sign"] = s
-	req, err = util.NewHTTPReqeust(http.MethodGet, "http://www.luojilab.com/sdf", query, header, nil)
+	req, err = util.NewHTTPReqeust(http.MethodGet, "http://www.baidu.com/sdf", query, header, nil)
 	b, _ := httputil.DumpRequest(req, false)
 	t.Log(string(b))
 	assert.NoError(t, err)

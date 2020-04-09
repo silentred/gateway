@@ -1,3 +1,4 @@
 webui/node_modules
 webui/dist
 tests/locust/bench.pyc
+.vscode

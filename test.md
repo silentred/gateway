@@ -2,10 +2,10 @@
 
 ```
 下载源码
-go get gitlab.luojilab.com/igetserver/entree
+go get github.com/silentred/gateway
 
 编译
-cd $GOPATH/src/gitlab.luojilab.com/igetserver/entree
+cd $GOPATH/src/github.com/silentred/gateway
 make build
 
 配置文件: 目录下 config.yaml, route.cfg
@@ -51,9 +51,9 @@ reactor:
 route.cfg
 
 ```
-Route:www.luojilab.com Prefix:/v1/A/hello Service:serviceA Strip:/v1/A Targets(127.0.0.1:8080,100)
-Route:s2.luojilab.com Prefix:/v1/B/world Service:serviceB Strip:/v1/B Targets(127.0.0.1:8081,100)
-Route:s3.luojilab.com Prefix:/v1/C/hello Service:serviceC Strip:/v1/C Targets(127.0.0.1:8082,100)
+Route:www.baidu.com Prefix:/v1/A/hello Service:serviceA Strip:/v1/A Targets(127.0.0.1:8080,100)
+Route:s2.baidu.com Prefix:/v1/B/world Service:serviceB Strip:/v1/B Targets(127.0.0.1:8081,100)
+Route:s3.baidu.com Prefix:/v1/C/hello Service:serviceC Strip:/v1/C Targets(127.0.0.1:8082,100)
 Route:192.168.16.230:8088 Prefix:/v1/hello Service:localSvc Strip:/v1 Targets(127.0.0.1:8080,20)
 ```
 
@@ -78,7 +78,7 @@ curl http://192.168.16.230:8088/v1/hello/sdf
 
 ### 签名
 
-前端的请求需要有签名，签名方案在文档中, http://wiki.luojilab.com/display/IG/Gateway+Signing+Method 。
+前端的请求需要有签名，签名方案在文档中, http://wiki.baidu.com/display/IG/Gateway+Signing+Method 。
 签名不合法的返回 HTTP Code = 403.
 Secret的值在 config.yaml 中配置， guard.secret 
 

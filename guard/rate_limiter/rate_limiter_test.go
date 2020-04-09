@@ -18,7 +18,7 @@ func TestRateLimiter(t *testing.T) {
 	header := map[string]string{
 		"X-UID": "123",
 	}
-	req, _ := util.NewHTTPReqeust(http.MethodGet, "http://www.luojilab.com/sdf", nil, header, nil)
+	req, _ := util.NewHTTPReqeust(http.MethodGet, "http://www.baidu.com/sdf", nil, header, nil)
 
 	for i := 0; i < 11; i++ {
 		err = rl.Reject(req)

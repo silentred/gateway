@@ -7,8 +7,8 @@ import (
 
 	"github.com/silentred/kassadin/util"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/silentred/gateway/reactor/circuit_breaker"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestReplay(t *testing.T) {
@@ -20,7 +20,7 @@ func TestReplay(t *testing.T) {
 	header := map[string]string{
 		"X-Nonce": "randomstr",
 	}
-	req, _ := util.NewHTTPReqeust(http.MethodGet, "http://www.luojilab.com/sdf", nil, header, nil)
+	req, _ := util.NewHTTPReqeust(http.MethodGet, "http://www.baidu.com/sdf", nil, header, nil)
 
 	// first visit, pass
 	err = rr.Reject(req)

@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
-	"github.com/silentred/glog"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"github.com/silentred/gateway/config"
 	"github.com/silentred/gateway/route"
 	"github.com/silentred/gateway/util"
+	"github.com/silentred/glog"
 )
 
 var (

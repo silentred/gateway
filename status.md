@@ -36,14 +36,14 @@
 
 ```
 go test $(go list ./...| grep -vE 'vendor') -cover
-?       gitlab.luojilab.com/igetserver/entree     [no test files]
-ok      gitlab.luojilab.com/igetserver/entree/config      1.023s  coverage: 69.9% of statements
-ok      gitlab.luojilab.com/igetserver/entree/guard       0.014s  coverage: 92.6% of statements
-ok      gitlab.luojilab.com/igetserver/entree/proxy       0.025s  coverage: 66.2% of statements
-ok      gitlab.luojilab.com/igetserver/entree/reactor     0.016s  coverage: 95.8% of statements
-ok      gitlab.luojilab.com/igetserver/entree/reactor/circuit_breaker     1.525s  coverage: 98.1% of statements
-ok      gitlab.luojilab.com/igetserver/entree/route       0.012s  coverage: 78.6% of statements
-ok      gitlab.luojilab.com/igetserver/entree/util        0.042s  coverage: 25.6% of statements
+?       github.com/silentred/gateway     [no test files]
+ok      github.com/silentred/gateway/config      1.023s  coverage: 69.9% of statements
+ok      github.com/silentred/gateway/guard       0.014s  coverage: 92.6% of statements
+ok      github.com/silentred/gateway/proxy       0.025s  coverage: 66.2% of statements
+ok      github.com/silentred/gateway/reactor     0.016s  coverage: 95.8% of statements
+ok      github.com/silentred/gateway/reactor/circuit_breaker     1.525s  coverage: 98.1% of statements
+ok      github.com/silentred/gateway/route       0.012s  coverage: 78.6% of statements
+ok      github.com/silentred/gateway/util        0.042s  coverage: 25.6% of statements
 ```
 
 ## Benchmark

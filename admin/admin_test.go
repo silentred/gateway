@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/silentred/gateway/route"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAdmin(t *testing.T) {
 	// dto := routesDTO{
-	// 	RouteHost:           "svc.luojilab.com",
+	// 	RouteHost:           "svc.baidu.com",
 	// 	RoutePrefix:         "/v1/hello",
 	// 	ServiceName:         "testSvc",
 	// 	ServiceStrip:        "/v1",
@@ -23,7 +23,7 @@ func TestAdmin(t *testing.T) {
 
 	dto := routesDTO{
 		Route: route.Route{
-			Host:   "svc.luojilab.com",
+			Host:   "svc.baidu.com",
 			Prefix: "/v1/hello",
 		},
 		Service: &route.Service{

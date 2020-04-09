@@ -17,7 +17,7 @@ func TestCircuitBreaker(t *testing.T) {
 	var err error
 	cb := NewCircuitBreaker(c, s, thresholdCnt, thresholdDuration, blockDuration)
 
-	req, _ := http.NewRequest(http.MethodGet, "http://www.luojilab.com/v1/A/hello?a=b&c=d", nil)
+	req, _ := http.NewRequest(http.MethodGet, "http://www.baidu.com/v1/A/hello?a=b&c=d", nil)
 	resp := &http.Response{Request: req, StatusCode: 500}
 
 	// not reject, because not reaching the thresholdCnt
