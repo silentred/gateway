@@ -11,10 +11,11 @@ require (
 	github.com/gorilla/websocket v1.4.0
 	github.com/hashicorp/consul/api v1.4.0
 	github.com/hashicorp/go-cleanhttp v0.5.1
-	github.com/labstack/echo/v4 v4.1.16
+	github.com/labstack/echo/v4 v4.9.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/prometheus/client_golang v1.5.1
 	github.com/silentred/glog v0.0.0-20170901144157-7188d05808bf
+	github.com/silentred/kassadin v0.0.0-20170410080811-c62e45ba9a7d
 	github.com/silentred/toolkit v0.1.5
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.7.0
 )
